@@ -104,7 +104,7 @@ end
 
 set :port, PORT
 set :bind, HOST
-set :server, "thin"
+set :server, "puma"
 
 configure do
   enable :cross_origin
@@ -223,10 +223,13 @@ class WebSocketProxy
     deepgram_ws.on :message do |event|
       if client_ws && client_ws.ready_state == Faye::WebSocket::API::OPEN
         # Forward message preserving type (binary or text)
-        if event.data.is_a?(Array)
-          client_ws.send(event.data) # binary data as array of bytes
+        data = event.data
+        if data.is_a?(Array)
+          client_ws.send(data) # binary data as array of bytes
+        elsif data.is_a?(String) && data.encoding == Encoding::ASCII_8BIT
+          client_ws.send(data.bytes) # binary data as ASCII-8BIT string -> convert to bytes
         else
-          client_ws.send(event.data) # text data
+          client_ws.send(data) # text data
         end
       end
     end
@@ -259,10 +262,13 @@ class WebSocketProxy
     client_ws.on :message do |event|
       if deepgram_open && deepgram_ws
         # Forward message preserving type (binary or text)
-        if event.data.is_a?(Array)
-          deepgram_ws.send(event.data) # binary data as array of bytes
+        data = event.data
+        if data.is_a?(Array)
+          deepgram_ws.send(data) # binary data as array of bytes
+        elsif data.is_a?(String) && data.encoding == Encoding::ASCII_8BIT
+          deepgram_ws.send(data.bytes) # binary data as ASCII-8BIT string -> convert to bytes
         else
-          deepgram_ws.send(event.data) # text data
+          deepgram_ws.send(data) # text data
         end
       end
     end
