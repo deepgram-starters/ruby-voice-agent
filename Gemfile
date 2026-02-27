@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby ">= 3.2.0"
 
-gem "sinatra", "4.1.1"
+gem "sinatra", "4.2.0"
 gem "sinatra-cross_origin", "0.4.0"
 gem "puma", "6.5.0"
 gem "faye-websocket", "0.11.3"
