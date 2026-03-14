@@ -18,7 +18,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.5)
-    rack-protection (4.1.1)
+    rack-protection (4.2.0)
       base64 (>= 0.1.0)
       logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)
@@ -28,11 +28,11 @@ GEM
     rackup (2.2.1)
       rack (>= 3)
     ruby2_keywords (0.0.5)
-    sinatra (4.1.1)
+    sinatra (4.2.0)
       logger (>= 1.6.0)
       mustermann (~> 3.0)
       rack (>= 3.0.0, < 4)
-      rack-protection (= 4.1.1)
+      rack-protection (= 4.2.0)
       rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
     sinatra-cross_origin (0.4.0)
@@ -56,7 +56,7 @@ DEPENDENCIES
   jwt (= 2.9.3)
   puma (= 6.5.0)
   rackup (= 2.2.1)
-  sinatra (= 4.1.1)
+  sinatra (= 4.2.0)
   sinatra-cross_origin (= 0.4.0)
   toml-rb (= 3.0.1)
 
@@ -73,11 +73,11 @@ CHECKSUMS
   puma (6.5.0) sha256=94d1b75cab7f356d52e4f1b17b9040a090889b341dbeee6ee3703f441dc189f2
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rack (3.2.5) sha256=4cbd0974c0b79f7a139b4812004a62e4c60b145cba76422e288ee670601ed6d3
-  rack-protection (4.1.1) sha256=51a254a5d574a7f0ca4f0672025ce2a5ef7c8c3bd09c431349d683e825d7d16a
+  rack-protection (4.2.0) sha256=67909eb1c29ebb52a9bdedfd4201cec70a542edd7671dbd87eae3d73d2d115bf
   rack-session (2.1.1) sha256=0b6dc07dea7e4b583f58a48e8b806d4c9f1c6c9214ebc202ec94562cbea2e4e9
   rackup (2.2.1) sha256=f737191fd5c5b348b7f0a4412a3b86383f88c43e13b8217b63d4c8d90b9e798d
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
-  sinatra (4.1.1) sha256=4e997b859aa1b5d2e624f85d5b0fd0f0b3abc0da44daa6cbdf10f7c0da9f4d00
+  sinatra (4.2.0) sha256=3fab45063312c298dc4153ba35736b755eda329695d2bdf28129ad99131964ef
   sinatra-cross_origin (0.4.0) sha256=97cd2fe153413df0f13f2b3bafe00c677045fdaa90f4d96d76e7e269baf296bb
   tilt (2.7.0) sha256=0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3
   toml-rb (3.0.1) sha256=a3a764dcdd85e7b51207f72b0743f109474bb1bea3c54a392ae32903263200b2
